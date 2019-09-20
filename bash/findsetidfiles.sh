@@ -20,5 +20,5 @@ echo ""
 echo "10 Largest files:"
 echo "============="
 echo "Owner:File Size:File Name"
-ls -l --block-size=M / | awk '{ print $3 " : " $5 " : " $9}' | sort -k 2 -r | head -10
+ls -lR --block-size=M / 2>/dev/null | awk '{ print $3 " : " $5 " : " $9}' | sort -k 2 -r | head -10
 echo ""
