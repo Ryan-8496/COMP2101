@@ -13,3 +13,12 @@ echo "Setuid files:"
 echo "============="
 find / -type f -executable -perm -4000 -ls 2>/dev/null | sort -k 3
 echo ""
+echo "Setgid files:"
+echo "============="
+find / -type f -executable -perm -2000 -ls 2>/dev/null | sort -k 3
+echo ""
+echo "10 Largest files:"
+echo "============="
+echo "Owner:File Size:File Name"
+ls -l --block-size=M / | awk '{ print $3 " : " $5 " : " $9}' | sort -k 2 -r | head -10
+echo ""
