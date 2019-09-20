@@ -20,6 +20,5 @@ echo ""
 echo "10 Largest files:"
 echo "============="
 echo "Owner:File Size:File Name"
-ls -lLR --block-size=M / 2>/dev/null | sort -k 5 -r | awk '{ print $3 " : " $5 " : " $9}' | head -10
-echo ""
 find / -type f -size +0 -exec ls -lh --block-size=M {} \; 2>/dev/null | awk '{ print $3 " : " $5 " : " $9}' | sort -k 2 | head -10
+echo ""
