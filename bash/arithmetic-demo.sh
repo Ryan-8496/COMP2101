@@ -9,10 +9,8 @@
 #   - first divided by second gives X with a remainder of Y
 # Improve this script by calculating and displaying the first number raised to the power of the second number
 
-echo "Please provide the first number:"
-read firstnum
-echo "Please provide the second number:"
-read secondnum
+read -p "Pease provide the first number: " firstnum
+read -p "Please provide the second number: " secondnum
 echo "Running calcuations..."
 subtractnd=$((firstnum - secondnum))
 multiplynd=$((firstnum * secondnum))
